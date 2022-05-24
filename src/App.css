@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+.navbar{
+  background-color: #282c34;
+  color: white;
+  display: grid;
+  grid-template-columns: auto;
+}
+.margin{
+  margin: 50px;
+ 
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
