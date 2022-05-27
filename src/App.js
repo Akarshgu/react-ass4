@@ -4,9 +4,11 @@ import Student from './Component/Student.js'
 import Contact from './Component/Contact.js'
 import {BrowserRouter,Routes,Route,Link} from "react-router-dom"
 import Home from './Component/Home.js';
+import Data from './Component/Data';
 import './Component/Style.css'
 function App() {
   return (
+    <Data> 
     <BrowserRouter>
     
       <div class="navbar navbar-expand-lg bg-dark" id='navBar'>
@@ -21,7 +23,7 @@ function App() {
         <Route path='/Contact' element={<Contact/>}/>
       </Routes>
     </BrowserRouter>
-
+ </Data> 
   );
 }
 

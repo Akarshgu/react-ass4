@@ -1,37 +1,51 @@
-import React from 'react'
+
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { store } from './Data'
 
 const Student = () => {
+    const [student]=useContext(store)
   return (
     <div>
-      <table class="table">
+
+<div><Link to="/add-student">Add Student</Link></div>
+
+<table className="table table-bordered border-primary">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Course</th>
+      <th scope="col">Batch</th>
+      <th scope="col">Change</th>
+
     </tr>
   </thead>
-  <tbody class="table-group-divider">
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+
+  <tbody>
+      {student.map((student)=>(<tr key={student.id}>
+
+<td>{student.Name}</td>
+<td>{student.Age}</td>
+<td>{student.Course}</td>
+<td>{student.Batch}</td>
+<td><Link to="/edit">Edit</Link></td>
+
+</tr>
+
+
+      ))}
+  
+  
   </tbody>
 </table>
+
+
+
+
+
+
+
     </div>
   )
 }

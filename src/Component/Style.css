@@ -45,6 +45,18 @@ h1{
     border-radius: 50%;
     align-items: center;
 }
+.k{
+    color: black;
+}
+.k:hover{
+    color: blue;
+}
+.ak{
+    color: black;
+}
+/* .field1{
+    background-color: blue;
+} */
 @media (max-width:720px){
     .cont{
         display: inline;
